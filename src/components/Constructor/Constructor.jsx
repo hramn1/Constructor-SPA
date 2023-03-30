@@ -3,6 +3,7 @@ import ResponsiveAppBar from "../Ui/ResponsiveAppBar";
 import {LeftPanel} from "./Left-panel";
 import {Workspace} from "./Worlspace";
 import "./consructor.scss";
+import {RightPanel} from "./Right-panel";
 
 export function Constructor () {
   return (
@@ -13,6 +14,7 @@ export function Constructor () {
       <main className={"main-page"}>
         <LeftPanel />
         <Workspace />
+        <RightPanel />
       </main>
     </>
 
