@@ -3,18 +3,18 @@ import React from "react";
 import ControlledAccordions from "../Ui/Accordion";
 
 export function LeftPanel () {
+  function handleDragStart(evt){
+    evt.dataTransfer.setData('text', evt.currentTarget.className);
+  }
   return (
     <>
     <section className={'left-panel'}>
       <ControlledAccordions />
-      <p
+      <p className={"drag-title"}
         draggable={true}
-        onDrag={(e)=>{}}
-        onDrop={(e)=>{
-          console.log(e)
-        }}
-        onDragEnd={(e)=>{
-          console.log(e)
+        onDragStart={handleDragStart}
+        onDragEnd={(evt)=>{
+
         }}
         >Заголовок</p>
     </section>
