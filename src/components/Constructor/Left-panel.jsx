@@ -1,22 +1,23 @@
 import {Link} from "react-router-dom";
 import React from "react";
-import ControlledAccordions from "../Ui/Accordion";
+import AccordionUi from "../Ui/Accordion";
 
 export function LeftPanel () {
+  const NAME_LABEL = ["common", "header", "main", 'footer']
   function handleDragStart(evt){
     evt.dataTransfer.setData('text', evt.currentTarget.className);
   }
   return (
     <>
     <section className={'left-panel'}>
-      <ControlledAccordions />
-      <p className={"drag-title"}
-        draggable={true}
-        onDragStart={handleDragStart}
-        onDragEnd={(evt)=>{
+      {NAME_LABEL.map((item)=> {
+        return(
+        <AccordionUi
+          key={item}
+          label={item} />
+        )}
+      )}
 
-        }}
-        >Заголовок</p>
     </section>
     </>
   )
