@@ -8,9 +8,7 @@ import {RightPanel} from "./Right-panel";
 export function Constructor () {
   return (
     <>
-      <header>
         <ResponsiveAppBar />
-      </header>
       <main className={"main-page"}>
         <LeftPanel />
         <Workspace />

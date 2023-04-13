@@ -12,4 +12,11 @@ const headerBtn = {
   'dropChild': false,
   'area': 'header'
 }
-export const arrBtnArea = [title,headerBtn]
+const MainBtn = {
+  'label': 'Секция',
+  'className': 'drag-section',
+  'dropOnParent': true,
+  'dropChild': false,
+  'area': 'main'
+}
+export const arrBtnArea = [title, headerBtn, MainBtn]
