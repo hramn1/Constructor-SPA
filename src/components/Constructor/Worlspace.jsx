@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 import React from "react";
 import "./worslace.scss";
-
+import {RenderWork} from "./renderWork"
 
 export function Workspace () {
   function handleDrop (evt) {
@@ -18,6 +18,7 @@ export function Workspace () {
         }}
         onDrop={handleDrop}
       >
+        <RenderWork/>
       </section>
   )
 }
