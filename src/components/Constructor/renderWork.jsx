@@ -1,12 +1,14 @@
 import React from "react";
 import {treeDom} from "../../mock"
-
-export function RenderWork () {
+import {Node} from  "./Node"
+export function RenderWork ({treeDom}) {
     return (
       <>
         {treeDom.map((it)=>{
           return (
-            <div></div>
+           <Node
+           it={it}
+           />
           )
         }
           )}

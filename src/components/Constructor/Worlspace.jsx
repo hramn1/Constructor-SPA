@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import React from "react";
 import "./worslace.scss";
+import {treeDom} from "../../mock"
 import {RenderWork} from "./renderWork"
 
 export function Workspace () {
@@ -18,7 +19,9 @@ export function Workspace () {
         }}
         onDrop={handleDrop}
       >
-        <RenderWork/>
+        <RenderWork
+          treeDom = {treeDom}
+        />
       </section>
   )
 }
