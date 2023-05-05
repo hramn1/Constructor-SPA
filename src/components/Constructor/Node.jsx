@@ -1,13 +1,16 @@
-import React from "react";
-import {RenderWork} from "./renderWork"
-export function Node ({it}) {
+import React from 'react';
+import { RenderWork } from './renderWork';
 
+export function Node({ it }) {
+  const TagName = {
+    header: 'header',
+    section: 'section',
+  };
+  console.log(it);
   return (
-    <div>{it.type}  {(it.children.length>0)?
-      <RenderWork
-      treeDom={it.children}
-    />:""}</div>
-
-  )
-
+    <div style={it.style}>
+      {it.type}{' '}
+      {it.children.length > 0 ? <RenderWork treeDom={it.children} /> : ''}
+    </div>
+  );
 }

@@ -1,11 +1,11 @@
-import React from "react";
-import ControlledAccordions from "../Ui/Accordion";
-import  "./right-panel.scss"
+import React from 'react';
+import ControlledAccordions from '../Ui/Accordion';
+import './right-panel.scss';
 
-export function RightPanel () {
+export function RightPanel() {
   return (
-      <section className={'right-panel'}>
-        <ControlledAccordions />
-      </section>
-  )
+    <section className={'right-panel'}>
+      <ControlledAccordions />
+    </section>
+  );
 }

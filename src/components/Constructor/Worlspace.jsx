@@ -1,34 +1,26 @@
-import { useState, useCallback, useEffect }  from 'react';
-import React from  'react';
-import "./worspace.scss";
-import {treeDom} from "../../mock";
-import {RenderWork} from "./renderWork";
-import {componentTree, setDragComponent} from './componentTree'
+import { useState, useCallback, useEffect } from 'react';
+import React from 'react';
+import './worspace.scss';
+import { treeDom } from '../../mock';
+import { RenderWork } from './renderWork';
+import { componentTree, setDragComponent } from './componentTree';
+
 export function Workspace() {
+  let [cops, setCops] = useState([]);
 
-   let [state, setState] = useState(0);
-   let [cops, setCops] = useState([]);
   function handleDrop(evt) {
-
-    setState(++state)
-    setCops((dd) => [
-      ...dd,
-      componentTree()
-    ]);
-
-    }
-
+    setCops((dd) => [...dd, componentTree()]);
+  }
 
   return (
     <section
       className={'workspace-container'}
       onDragOver={(e) => {
-        e.preventDefault()
+        e.preventDefault();
       }}
       onDrop={handleDrop}
-
     >
-      <RenderWork treeDom={cops} state={state} />
+      <RenderWork treeDom={cops} />
     </section>
-  )
+  );
 }
