@@ -9,13 +9,13 @@ import { GenerateBtn } from '../Constructor/components-drag/generateBtn';
 
 export default function AccordionUi({ label }) {
   return (
-    <Accordion>
+    <Accordion >
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel1a-content"
         id="panel1a-header"
       >
-        <Typography>{label}</Typography>
+        <Typography variant='h5' className={'accordion-title'}>{label}</Typography>
       </AccordionSummary>
       <AccordionDetails>
         {arrBtnArea

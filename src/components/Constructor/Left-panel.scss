@@ -1,7 +1,10 @@
 @import "../../styles/variables";
 .left-panel{
   padding: 10px 25px 20px 10px;
-  box-shadow: 9px 0 18px 0 #333;
+  box-shadow: 13px 9px 17px 2px #333;
   z-index: 4;
   flex-basis: 15%;
+  &__title{
+    text-transform: Capitalize;
+  }
 }

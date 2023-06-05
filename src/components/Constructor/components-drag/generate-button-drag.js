@@ -1,8 +1,16 @@
 const title = {
   label: 'h1',
   className: 'drag-title',
-  dropOnParent: true,
   dropChild: false,
+  dropOnParent: true,
+  area: 'common',
+  css: {},
+};
+const container = {
+  label: 'container',
+  className: 'drag-container',
+  dropChild: false,
+  dropOnParent: true,
   area: 'common',
   css: {},
 };
@@ -14,7 +22,7 @@ const headerBtn = {
   area: 'header',
   css: { padding: '20px', backgroundColor: 'azure' },
 };
-const MainBtn = {
+const mainBtn = {
   label: 'section',
   className: 'drag-section',
   dropOnParent: true,
@@ -22,4 +30,4 @@ const MainBtn = {
   area: 'main',
   css: {},
 };
-export const arrBtnArea = [title, headerBtn, MainBtn];
+export const arrBtnArea = [title, headerBtn, mainBtn, container];
