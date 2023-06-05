@@ -1,5 +1,5 @@
 import React from 'react';
-import ControlledAccordions from '../Ui/Accordion';
+import ControlledAccordions from '../../Ui/Accordion';
 import './right-panel.scss';
 
 export function RightPanel() {

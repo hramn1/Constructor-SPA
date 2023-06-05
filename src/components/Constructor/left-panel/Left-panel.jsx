@@ -1,5 +1,5 @@
 import React from 'react';
-import AccordionUi from '../Ui/Accordion';
+import AccordionUi from '../../Ui/Accordion';
 import './Left-panel.scss';
 export function LeftPanel() {
   const NAME_LABEL = ['common', 'header', 'main', 'footer'];

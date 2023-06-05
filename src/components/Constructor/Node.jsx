@@ -6,7 +6,6 @@ export function Node({ it }) {
     header: 'header',
     section: 'section',
   };
-  console.log(it);
   return (
     <div style={it.style}>
       {it.type}{' '}
