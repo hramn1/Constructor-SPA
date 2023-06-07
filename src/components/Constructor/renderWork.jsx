@@ -1,11 +1,9 @@
 import React, { useContext } from 'react';
 import { Node } from './Node';
-import {context} from "../Main/Main";
-
+import { Context } from "../Context/Context.js";
 export function RenderWork({ treeDom }) {
-  const value = useContext(context)
+  const value = useContext(Context)
 
-  console.log(value)
   return (
     <>
       {treeDom.map((it) => {

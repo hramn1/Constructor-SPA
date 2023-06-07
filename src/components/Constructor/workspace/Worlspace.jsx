@@ -1,12 +1,16 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import React from 'react';
 import './worspace.scss';
-import { treeDom } from '../../Templates/mock';
 import { RenderWork } from '../renderWork';
 import { componentTree, setDragComponent } from '../componentTree';
+import { Context } from "../../Context/Context";
 
 export function Workspace() {
-  let [cops, setCops] = useState([]);
+  let dd = useContext(Context)
+  if(!dd){
+    dd = []
+  }
+  let [cops, setCops] = useState(dd);
 
   function handleDrop(evt) {
     setCops((comps) => [...comps, componentTree()]);
