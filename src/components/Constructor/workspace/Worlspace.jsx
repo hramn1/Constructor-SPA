@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import React from 'react';
 import './worspace.scss';
-import { treeDom } from '../../../mock';
+import { treeDom } from '../../Templates/mock';
 import { RenderWork } from '../renderWork';
 import { componentTree, setDragComponent } from '../componentTree';
 
