@@ -1,9 +1,9 @@
-import { useState, useContext, useEffect } from 'react';
+import {useState, useContext} from 'react';
 import React from 'react';
 import './worspace.scss';
-import { RenderWork } from '../renderWork';
-import { componentTree, setDragComponent } from '../componentTree';
-import { Context } from "../../Context/Context";
+import {RenderWork} from '../RenderWork';
+import {ComponentTree} from '../ComponentTree';
+import {Context} from "../../Context/Context";
 
 export function Workspace() {
   let dd = useContext(Context)
@@ -12,13 +12,13 @@ export function Workspace() {
   }
   let [cops, setCops] = useState(dd);
 
-  function handleDrop(evt) {
-    setCops((comps) => [...comps, componentTree()]);
+  function handleDrop() {
+    setCops((comps) => [...comps, ComponentTree()]);
   }
 
   return (
     <section
-      className={'workspace-container'}
+      className={`workspace-container`}
       onDragOver={(evt) => {
         evt.preventDefault();
       }}

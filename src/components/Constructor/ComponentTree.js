@@ -1,12 +1,10 @@
-import React from 'react';
-
 let obj;
 let id = 0;
 
 export function setDragComponent(currentComp) {
   id++;
   obj = {
-    id: id,
+    id,
     style: currentComp.css,
     type: currentComp.area,
     label: currentComp.label,
@@ -15,6 +13,6 @@ export function setDragComponent(currentComp) {
   };
 }
 
-export function componentTree() {
+export function ComponentTree() {
   return obj;
 }

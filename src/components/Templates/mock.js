@@ -1,35 +1,35 @@
 export const treeDom = [
   {
     id: 1,
-    type: 'header',
+    type: `header`,
     parent: null,
     children: [
       {
         id: 2,
-        type: "h1",
+        type: `h1`,
         parent: 1,
-        css: "height: 50px; background: red",
-        children: []
+        css: `height: 50px; background: red`,
+        children: [],
       },
       {
         id: 4,
-        type: "p",
+        type: `p`,
         parent: 1,
         children: [
           {
             id: 5,
-            type: "span",
+            type: `span`,
             parent: 4,
-            children: []
+            children: [],
           },
-        ]
-      }
-    ]
+        ],
+      },
+    ],
   },
   {
     id: 3,
-    type: "p",
+    type: `p`,
     parent: null,
-    children: []
-  }
-]
+    children: [],
+  },
+];

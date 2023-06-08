@@ -1,11 +1,11 @@
 import React from 'react';
-import { setDragComponent } from '../componentTree';
-
-export function GenerateBtn({ protoObj }) {
+import {setDragComponent} from '../ComponentTree';
+import PropTypes from 'prop-types';
+export function GenerateBtn({protoObj}) {
   return (
     <p
       draggable={true}
-      onDragStart={(evt) => {
+      onDragStart={() => {
         setDragComponent(protoObj);
       }}
       onDragEnd={() => {}}
@@ -14,3 +14,6 @@ export function GenerateBtn({ protoObj }) {
     </p>
   );
 }
+GenerateBtn.propTypes = {
+  protoObj: PropTypes.object
+};
