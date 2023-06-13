@@ -2,18 +2,17 @@ import {useState, useContext} from 'react';
 import React from 'react';
 import './worspace.scss';
 import {RenderWork} from '../RenderWork';
-import {ComponentTree} from '../ComponentTree';
+import {componentTree} from '../ComponentTree';
 import {Context} from "../../Context/Context";
 
 export function Workspace() {
-  let dd = useContext(Context)
-  if(!dd){
-    dd = []
+  let compTemplate = useContext(Context);
+  if (!compTemplate) {
+    compTemplate = [];
   }
-  let [cops, setCops] = useState(dd);
-
+  let [cops, setCops] = useState(compTemplate);
   function handleDrop() {
-    setCops((comps) => [...comps, ComponentTree()]);
+    setCops((comps) => [...comps, componentTree()]);
   }
 
   return (

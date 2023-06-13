@@ -13,6 +13,6 @@ export function setDragComponent(currentComp) {
   };
 }
 
-export function ComponentTree() {
+export function componentTree() {
   return obj;
 }

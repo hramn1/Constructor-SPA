@@ -4,10 +4,11 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { arrBtnArea } from '../Constructor/components-drag/generate-button-drag';
-import { GenerateBtn } from '../Constructor/components-drag/generateBtn';
+import {arrBtnArea} from '../Constructor/components-drag/generate-button-drag';
+import {GenerateBtn} from '../Constructor/components-drag/generateBtn';
+import PropTypes from 'prop-types';
 
-export default function AccordionUi({ label }) {
+export default function AccordionUi({label}) {
   return (
     <Accordion >
       <AccordionSummary
@@ -15,7 +16,7 @@ export default function AccordionUi({ label }) {
         aria-controls="panel1a-content"
         id="panel1a-header"
       >
-        <Typography variant='h5' className={'accordion-title'}>{label}</Typography>
+        <Typography variant='h5' className={`accordion-title`}>{label}</Typography>
       </AccordionSummary>
       <AccordionDetails>
         {arrBtnArea
@@ -27,3 +28,6 @@ export default function AccordionUi({ label }) {
     </Accordion>
   );
 }
+AccordionUi.propTypes = {
+  label: PropTypes.string
+};

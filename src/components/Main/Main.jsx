@@ -1,13 +1,13 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import {BrowserRouter, Link, Route, Routes} from 'react-router-dom';
-import { treeDom } from '../Templates/mock';
+import {useNavigate} from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import {treeDom} from '../Templates/mock';
 
 // eslint-disable-next-line react/prop-types
 export function Main() {
-  const navigate = useNavigate()
-  function fn (context){
-    navigate(`/constructor`,  { state: {context} });
+  const navigate = useNavigate();
+  function handleClickTemplate(context) {
+    navigate(`/constructor`, {state: {context}});
   }
   return (
     <>
@@ -17,7 +17,7 @@ export function Main() {
         <section>
           <ul>
             <li
-            onClick={()=>fn(treeDom)}
+              onClick={()=> handleClickTemplate(treeDom)}
             >Шаблон один</li>
           </ul>
         </section>
