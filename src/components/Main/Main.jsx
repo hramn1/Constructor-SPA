@@ -1,7 +1,7 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
 import {Link} from 'react-router-dom';
-import {treeDom} from '../Templates/mock';
+import {treeDom} from '../Templates/template-one';
 
 // eslint-disable-next-line react/prop-types
 export function Main() {

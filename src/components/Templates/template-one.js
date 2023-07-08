@@ -3,12 +3,13 @@ export const treeDom = [
     id: 1,
     type: `header`,
     parent: null,
+    style: {padding: `20px`, backgroundColor: `azure`},
     children: [
       {
         id: 2,
         type: `h1`,
         parent: 1,
-        css: `height: 50px; background: red`,
+        style: {padding: `20px`, backgroundColor: `azure`},
         children: [],
       },
       {

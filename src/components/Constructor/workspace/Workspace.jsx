@@ -14,6 +14,9 @@ export function Workspace() {
   function handleDrop() {
     setCops((comps) => [...comps, componentTree()]);
   }
+  function handleClick(evt){
+    evt.target.classList.add('element-selected');
+  }
 
   return (
     <section
@@ -22,6 +25,7 @@ export function Workspace() {
         evt.preventDefault();
       }}
       onDrop={handleDrop}
+      onClick={handleClick}
     >
       <RenderWork treeDom={cops} />
     </section>

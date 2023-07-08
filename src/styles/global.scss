@@ -5,3 +5,6 @@ body {
 *, *::after, *::before {
   box-sizing: border-box;
 }
+.element-selected{
+  outline: 1px solid red;
+}
